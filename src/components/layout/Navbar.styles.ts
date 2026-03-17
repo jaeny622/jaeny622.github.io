@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav<{scrolled: boolean}>`
+export const Nav = styled.nav<{$scrolled: boolean}>`
   position: fixed; 
   top: 0; 
   left: 0; 
@@ -14,11 +14,11 @@ export const Nav = styled.nav<{scrolled: boolean}>`
   
   transition: background .4s,box-shadow .4s,border-color .4s;
   
-  ${props=>props.scrolled && `
-    background: rgba(238,245,240,.9); 
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border2);
-    box-shadow: 0 1px 20px rgba(45,106,79,.08);
+  ${props => props.$scrolled && `
+      background: rgba(238,245,240,.9); 
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border2);
+      box-shadow: 0 1px 20px rgba(45,106,79,.08);
   `}
 
   @media (max-width:900px) {
@@ -53,7 +53,7 @@ export const Leaf = styled.div`
   animation: leafSway 4s ease-in-out infinite;
 `;
 
-export const Links = styled.ul<{open: boolean}>`
+export const Links = styled.ul<{$open: boolean}>`
   display: flex;
   
   @media (max-width:900px) {
@@ -70,7 +70,7 @@ export const Links = styled.ul<{open: boolean}>`
     background: rgba(238,245,240,.97); 
     backdrop-filter: blur(20px);
 
-    ${props => props.open && `display: flex;`}
+    ${props => props.$open && `display: flex;`}
   }
 `;
 
@@ -105,7 +105,7 @@ export const Link = styled.a`
   }
 `;
 
-export const Hamburger = styled.button<{open: boolean}>`
+export const Hamburger = styled.button<{$open: boolean}>`
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -123,7 +123,7 @@ export const Hamburger = styled.button<{open: boolean}>`
     border-radius: 2px;
     transition: all .3s;
   }
-  ${props => props.open && `
+  ${props => props.$open && `
     span:nth-child(1) { transform: rotate(45deg) translate(4.5px,4.5px); }
     span:nth-child(2) { opacity: 0; }
     span:nth-child(3) { transform: rotate(-45deg) translate(4.5px,-4.5px); }

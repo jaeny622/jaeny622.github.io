@@ -15,21 +15,20 @@ const LINKS = [
 export default function Navbar() {
   const scrolled = useNavScroll();
   const [open, setOpen] = useState(false);
+
   return (
-    <S.Nav scrolled={scrolled}>
+    <S.Nav $scrolled={scrolled}>
       <S.Logo>
         <S.Leaf>J</S.Leaf>오지수
       </S.Logo>
-      <S.Links open={open}>
+      <S.Links $open={open}>
         {LINKS.map(link => (
-          <S.Link key={link.href}>
-            <a href={link.href} onClick={() => setOpen(false)}>
-              {link.label}
-            </a>
+          <S.Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            {link.label}
           </S.Link>
         ))}
       </S.Links>
-      <S.Hamburger open={open} onClick={() => setOpen(v=>!v)} aria-label="메뉴">
+      <S.Hamburger $open={open} onClick={() => setOpen(v=>!v)} aria-label="메뉴">
         <span /><span /><span />
       </S.Hamburger>
     </S.Nav>
