@@ -1,8 +1,12 @@
+import Cursor    from '@/components/layout/Cursor'
+import Navbar    from '@/components/layout/Navbar'
+
 export default function App() {
   return (
     <>
+      <Cursor />
+      <Navbar />
       <main>
-        Jisu's Portfolio
       </main>
     </>
   )
