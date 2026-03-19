@@ -17,14 +17,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <S.Nav $scrolled={scrolled}>
+    <S.Nav $scrolled={scrolled} $open={open}>
       <S.Logo>
         <S.Leaf>J</S.Leaf>오지수
       </S.Logo>
       <S.Links $open={open}>
         {LINKS.map(link => (
-          <S.Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
-            {link.label}
+          <S.Link key={link.href} onClick={() => setOpen(false)}>
+            <a href={link.href}>
+              {link.label}
+            </a>
           </S.Link>
         ))}
       </S.Links>
