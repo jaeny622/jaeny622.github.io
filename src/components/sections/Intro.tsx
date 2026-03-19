@@ -1,6 +1,6 @@
 import * as S from './Intro.styles';
 
-const TECH_PILLS = ['React','TypeScript','MobX','Chart.js','D3.js','Storybook','Vite','Styled-components', 'Html', 'Css', 'JavaScript', 'JQuery'];
+const TECH_PILLS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'Amcharts', 'Storybook', 'Vite', 'Styled-components'];
 
 const STATS = [
   { num: '5', sup: '+', label: 'Years Exp' },
