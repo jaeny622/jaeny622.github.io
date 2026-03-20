@@ -1,8 +1,9 @@
-import Cursor    from '@/components/layout/Cursor'
-import Navbar    from '@/components/layout/Navbar'
+import Cursor    from '@/components/layout/Cursor';
+import Navbar    from '@/components/layout/Navbar';
+import About from '@/components/sections/About';
 
-import Intro       from '@/components/sections/Intro'
-import Marquee       from '@/components/sections/Marquee'
+import Intro       from '@/components/sections/Intro';
+import Marquee       from '@/components/sections/Marquee';
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
       <main>
         <Intro />
         <Marquee />
+        <About />
       </main>
     </>
-  )
+  );
 }
