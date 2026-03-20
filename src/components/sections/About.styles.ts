@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Grid = styled.div`
+export const GridBox = styled.div`
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 5rem;
@@ -48,7 +48,7 @@ export const Contact = styled.div`
   box-shadow: var(--sh-sm);
 `;
 
-export const Item = styled.div`
+export const AboutItem = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -80,7 +80,8 @@ export const CardBox = styled.div`
   flex-direction: column;
   gap: 1rem;
 `;
-export const Card = styled.div`
+
+export const AboutCard = styled.div`
   display: flex;
   gap: 1.2rem;
   align-items: flex-start;

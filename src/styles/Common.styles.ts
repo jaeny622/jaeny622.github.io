@@ -9,6 +9,13 @@ export const SectionWrap = styled.div`
     z-index: 1;
 `;
 
+export const SectionAlt = styled.section`
+    background: rgba(255, 255, 255, .35); 
+    backdrop-filter: blur(4px);
+    border-top: 1px solid var(--border2); 
+    border-bottom: 1px solid var(--border2);
+`;
+
 export const Eyebrow = styled.p`
     font-family: var(--fm); 
     font-size: .62rem; 
