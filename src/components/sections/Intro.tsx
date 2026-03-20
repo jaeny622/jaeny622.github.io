@@ -1,6 +1,6 @@
-import * as S from './Intro.styles';
+import * as S from '@/components/sections/Intro.styles';
 
-const TECH_PILLS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'Amcharts', 'Storybook', 'Vite', 'Styled-components'];
+import { TECH_PILLS } from '@/data/portfolio'; 
 
 const STATS = [
   { num: '5', sup: '+', label: 'Years Exp' },

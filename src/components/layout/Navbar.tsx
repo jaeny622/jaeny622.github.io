@@ -30,7 +30,7 @@ export default function Navbar() {
           </S.Link>
         ))}
       </S.Links>
-      <S.Hamburger $open={open} onClick={() => setOpen(v=>!v)} aria-label="메뉴">
+      <S.Hamburger $open={open} onClick={() => setOpen(v => !v)} aria-label="메뉴">
         <span /><span /><span />
       </S.Hamburger>
     </S.Nav>

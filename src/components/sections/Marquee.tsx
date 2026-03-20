@@ -1,6 +1,6 @@
 import * as S from '@/components/sections/Marquee.styles';
 
-const MARQUEE_ITEMS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'amCharts', 'Storybook', 'Vite', 'Webpack','Styled-components', 'REST API'];
+import { MARQUEE_ITEMS } from '@/data/portfolio'; 
 
 export default function Marquee() {
   const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
