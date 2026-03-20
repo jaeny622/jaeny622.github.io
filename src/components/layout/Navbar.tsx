@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavScroll } from '@/hooks/useNavScroll';
+
 import * as S from './Navbar.styles';
 
 const LINKS = [
@@ -23,10 +24,8 @@ export default function Navbar() {
       </S.Logo>
       <S.Links $open={open}>
         {LINKS.map(link => (
-          <S.Link key={link.href} onClick={() => setOpen(false)}>
-            <a href={link.href}>
-              {link.label}
-            </a>
+          <S.Link href={link.href} key={link.href} onClick={() => setOpen(false)}>
+            {link.label}
           </S.Link>
         ))}
       </S.Links>
