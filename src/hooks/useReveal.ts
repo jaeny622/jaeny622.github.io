@@ -5,7 +5,9 @@ export function useReveal(selector = '.js-reveal') {
 
   useEffect(() => {
     const root = ref.current;
+    
     if (!root) return;
+
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { 
         if (e.isIntersecting) { 
@@ -14,7 +16,9 @@ export function useReveal(selector = '.js-reveal') {
         } 
       }), { threshold: 0.08 }
     );
+
     root.querySelectorAll(selector).forEach(el => obs.observe(el));
+
     return () => obs.disconnect();
   }, [selector]);
   
