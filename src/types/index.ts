@@ -40,3 +40,9 @@ export interface Education {
   subInfo: string;
   date: string;
 }
+
+export interface StoryCard {
+  seq: string;
+  title: string;
+  contents: string;
+}
