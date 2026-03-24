@@ -1,4 +1,4 @@
-import type { AboutCard, SkillCategory, Experience, Project } from '@/types';
+import type { AboutCard, SkillCategory, Experience, Project, Education } from '@/types';
 
 export const MARQUEE_ITEMS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'AmCharts', 'Storybook', 'Vite', 'Webpack', 'Styled-components','REST API'];
 export const TECH_PILLS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'Amcharts', 'Storybook', 'Vite', 'Styled-components'];
@@ -185,5 +185,38 @@ export const PROJECTS: Project[] = [
       '교육 과정 내 프로젝트 우수상 수상'
     ],
     stack: ['HTML/CSS', 'JavaScript', 'JAVA', 'Spring', 'Oracle', 'jQuery']
+  },
+];
+
+export const EDUCATIONS: Education[] = [
+  { 
+    category: 'University',  
+    name: '세종대학교',      
+    subInfo: '컴퓨터공학과 학사',                       
+    date: '2015.03 — 2020.08' 
+  },
+  { 
+    category: 'Training',    
+    name: 'KOSTA',           
+    subInfo: 'JAVA 기반 풀스택 웹 개발자 양성과정 수료', 
+    date: '2021.04 — 2021.09' 
+  },
+  { 
+    category: 'Certificate', 
+    name: 'OPIC IM3', 
+    subInfo: 'ACTFL',                         
+    date: '2025.03 취득' 
+  },
+  { 
+    category: 'Certificate', 
+    name: '정보처리기사',     
+    subInfo: '한국산업인력공단',                         
+    date: '2020.12 취득' 
+  },
+  { 
+    category: 'Certificate', 
+    name: '정보처리산업기사', 
+    subInfo: '한국산업인력공단',                         
+    date: '2017.11 취득' 
   },
 ];

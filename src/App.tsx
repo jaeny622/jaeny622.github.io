@@ -9,6 +9,7 @@ import About       from '@/components/sections/About';
 import Skills      from '@/components/sections/Skills';
 import Experience from '@/components/sections/Experience';
 import Projects from '@/components/sections/Projects';
+import Education from '@/components/sections/Education';
 
 import Modal from '@/components/ui/Modal';
 
@@ -28,6 +29,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects onOpen={setActive}/>
+        <Education />
       </main>
       <Modal project={active} onClose={() => setActive(null)} />
     </>
