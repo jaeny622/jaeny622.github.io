@@ -1,4 +1,4 @@
-import type { AboutCard, SkillCategory, Experience } from '@/types';
+import type { AboutCard, SkillCategory, Experience, Project } from '@/types';
 
 export const MARQUEE_ITEMS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'AmCharts', 'Storybook', 'Vite', 'Webpack', 'Styled-components','REST API'];
 export const TECH_PILLS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'Amcharts', 'Storybook', 'Vite', 'Styled-components'];
@@ -44,6 +44,12 @@ export const EXPERIENCES: Experience[] = [
     role: 'RG연구본부 · 연구원\n프론트엔드 개발',
     projects: [
       { 
+        name: '미래엔 디지털 교과서 지원', 
+        period: '2024.05 — 2024.10',
+        desc: '공통 컴포넌트 유지보수 및 크로스브라우징 이슈 해결. 특정 OS 오디오 볼륨 이슈 분석·대안 제안으로 고객사 동의 획득',
+        tags: ['React', 'TypeScript', 'Storybook'] 
+      },
+      { 
         name: '미래엔 AI Class 사업',
         period: '2023.09 — 2024.04',
         desc: '팀 내 최다 페이지 담당. 사용자 페이지(AI 학습지, 퀴즈온, 리포트) 및 관리자 페이지 구현. 통합 뷰어 기술 리서치 및 백엔드 소통 주도',
@@ -69,4 +75,115 @@ export const EXPERIENCES: Experience[] = [
       },
     ],
   },
-]
+];
+
+export const PROJECTS: Project[] = [
+  {
+    seq: '001', 
+    fallback: '교과서', 
+    thumbKey: null,
+    galleryKeys: [],
+    category: '교육 · 디지털 교과서', 
+    name: '미래엔 디지털 교과서',
+    desc: '공통 컴포넌트 유지보수, 크로스브라우징 이슈 해결. OS 오디오 볼륨 이슈 대안 제안',
+    period: '2024.05 — 2024.07',
+    goal: '디지털 교과서 서비스의 공통 컴포넌트 유지보수 및 사용자 개선 요청 대응',
+    points: [
+      '기 구현된 공통 컴포넌트 유지보수 진행',
+      '특정 기기 HTML Audio 볼륨 조절 불가 이슈 — OS 속성 미지원 원인 파악',
+      '음원 진폭 조절 방안 검토 후 음질 저하 우려로 대안 탐색',
+      'PL님께 현황·원인·대안 논리적 보고 → 협력사·고객사 동의 획득 후 적용'
+    ],
+    stack: ['React', 'TypeScript', 'Storybook', 'Styled-components']
+  },
+  {
+    seq: '002', 
+    fallback: 'AI Class',
+    thumbKey: 'textbook',
+    galleryKeys: ['textbook', 'quizon', 'quizon_detail', 'student_report', 'student_report_detail', 'quizon_report', 'admin_report', 'admin_notice'],
+    category: 'Edu-Tech · 미래엔', 
+    name: '미래엔 AI Class',
+    desc: '초·중·고 AI 학습 플랫폼. 사용자/관리자 페이지, 통합 뷰어, 차트 커스터마이징',
+    period: '2023.09 — 2024.04',
+    goal: '기존 미래엔의 초등 AI Class 서비스를 중·고등 대상으로 확장하며 기능 추가 및 디자인 리뉴얼 진행',
+    points: [
+      '팀 내 최다 페이지 담당 — AI 학습지, 퀴즈온, 학생 리포트, 퀴즈온 리포트 페이지 구현',
+      '관리자 페이지 — AI Class 평가코스 관리, FAQ 관리 페이지 구현',
+      'API 명세 기반 서비스·스토어 먼저 구현 후 더미데이터 적용 → 병렬 개발 제안',
+      '통합 뷰어(hwp, docx, xlsx, PPT, PDF) 기술 리서치 및 백엔드 소통 주도하여 완성',
+      'Chart.js, D3.js 활용 차트 커스터마이징 및 크로스브라우징 이슈 해결'
+    ],
+    stack: ['React', 'TypeScript', 'MobX', 'Vite', 'Chart.js', 'D3.js', 'Storybook', 'Styled-components', 'html2canvas', 'jspdf']
+  },
+  {
+    seq: '003', 
+    fallback: 'LMS Demo', 
+    thumbKey: 'scatter',
+    galleryKeys: ['bar', 'bubble', 'donut', 'gauge', 'line', 'radar', 'scatter'],
+    category: '에듀테크 박람회 출품', name: '자사 LMS 데모 페이지',
+    desc: '파트장으로 프로젝트 전체 리드. 공통 컴포넌트 설계, Storybook 도입, 차트 커스터마이징',
+    period: '2022.12 — 2023.09',
+    goal: '자사 LMS 제품 시연 및 에듀테크 박람회 출품을 위한 데모 페이지 구현',
+    points: [
+      '파트장 역할 수행 — 프로젝트 초기 설정, 배포, 일정 조율 담당',
+      '공통 Basic 컴포넌트 설계 및 구현으로 코드 재사용성 향상',
+      'Storybook 도입 및 팀 내 프론트엔드 컨벤션 정립으로 업무 효율 증가',
+      'Chart.js, D3.js, Billboard.js 활용 디자인 가이드 기반 차트 커스터마이징',
+      'Webpack → Vite 빌드 환경 전환으로 빌드 속도 대폭 개선'
+    ],
+    stack: ['React', 'TypeScript', 'MobX', 'Vite', 'Webpack', 'Chart.js', 'D3.js', 'Billboard.js', 'Storybook', 'Styled-components']
+  },
+  {
+    seq: '004', 
+    fallback: 'Convention', 
+    thumbKey: null, 
+    galleryKeys: [],
+    category: '컨벤션 리더십', 
+    name: '프론트엔드 컨벤션 통합',
+    desc: '팀 간 이관 문제 발의·회의 주도. 빌드도구·Lint·폴더구조 표준화',
+    period: '2023.01',
+    goal: '팀 간 프로젝트 이관 시 발생하는 비효율 문제를 해결하기 위한 컨벤션 표준화',
+    points: [
+      '팀 간 이관 문제(컨벤션 부재, 라이브러리/Node 버전 차이)를 팀장에게 안건 발의',
+      '각 팀 상황 파악 후 파트원 전체 소집하여 해결 방안 회의 주도',
+      '코드 구조는 팀 자율성 유지 / 빌드 도구·Lint·폴더구조·Node 버전 통일 제안',
+      '통일된 환경 기반 기본 프로젝트 생성·배포 → 협업 효율 및 이관 편의성 향상'
+    ],
+    stack: ['Vite', 'ESLint', 'Prettier', 'tsconfig', 'Node.js']
+  },
+  {
+    seq: '005', 
+    fallback: 'Talendar', 
+    thumbKey: null, 
+    galleryKeys: [],
+    category: '사내 툴 · 풀스택',
+    name: 'Talendar (일정관리)',
+    desc: '연구본부 일정관리 페이지. 로그인·마이프로필 풀스택 담당. React + Spring 연계',
+    period: '2022.09 — 2022.10',
+    goal: '연구본부에서 사용할 일정 관리 페이지 구현',
+    points: [
+      '로그인, 마이 프로필 페이지 풀스택 구현',
+      'React + Spring Framework 연계 개발 경험',
+      'react-calendar 라이브러리 활용 일정 UI 구현'
+    ],
+    stack: ['React', 'MUI', 'MobX', 'Webpack', 'TypeScript', 'react-calendar', 'JAVA', 'Spring Framework']
+  },
+  {
+    seq: '006', 
+    fallback: 'Groupware', 
+    thumbKey: null, 
+    galleryKeys: [],
+    category: 'KOSTA 교육과정 · 우수상', 
+    name: '그룹웨어 웹 구현',
+    desc: '팀 협업 주도로 우수상 수상. 기업용 그룹웨어 풀스택 구현',
+    period: '2021.07 — 2021.09',
+    goal: '소프트웨어 기술 진흥 협회 교육과정 팀 프로젝트. 기업용 그룹웨어 풀스택 구현',
+    points: [
+      '메인 페이지, 게시판, 임직원 정보, 나의 정보 페이지 구현',
+      '팀원들의 이슈 해결을 적극 지원하고 소통을 강화하여 팀 효율 향상',
+      '팀을 두 그룹으로 나눠 진행 상황 수시 공유 및 협력 주도',
+      '교육 과정 내 프로젝트 우수상 수상'
+    ],
+    stack: ['HTML/CSS', 'JavaScript', 'JAVA', 'Spring', 'Oracle', 'jQuery']
+  },
+];
