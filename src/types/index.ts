@@ -21,3 +21,16 @@ export interface Experience {
   role: string;
   projects: ExpProject[];
 }
+export interface Project {
+  seq: string;
+  fallback: string;
+  thumbKey: string | null;
+  galleryKeys: string[];
+  category: string;
+  name: string;
+  desc: string;
+  period: string;
+  goal: string;
+  points: string[];
+  stack: string[];
+}
