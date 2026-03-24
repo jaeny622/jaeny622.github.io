@@ -10,44 +10,6 @@ export const GridBox = styled.div`
     }
 `;
 
-export const ProjectCard = styled.div`
-    overflow: hidden;
-
-    background: var(--surface);
-    backdrop-filter: var(--blur);
-    box-shadow: var(--sh-sm);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    
-    transition: transform .3s var(--ease), box-shadow .3s, border-color .22s;
-    cursor: none;
-
-    &:hover {
-        transform: translateY(-6px);
-        box-shadow: var(--sh-lg);
-        border-color: rgba(82, 183, 136, .4);
-
-        & Overlay {
-            color:red;
-            background: rgba(45, 106, 79, .08);
-        }
-
-        & Thumbnail img {
-            transform: scale(1.05);
-            filter: saturate(1);
-        }
-
-        & ViewBtn {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-
-        & Name {
-            color: var(--accent);
-        }
-    }
-`;
-
 export const Thumbnail = styled.div`
     height: 205px;
     overflow: hidden;
@@ -185,4 +147,41 @@ export const TechTag = styled.span`
     background: rgba(45, 106, 79, .05);
     border: 1px solid rgba(45, 106, 79, .12);
     color: var(--mid);
+`;
+
+export const ProjectCard = styled.div`
+    overflow: hidden;
+
+    background: var(--surface);
+    backdrop-filter: var(--blur);
+    box-shadow: var(--sh-sm);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    
+    transition: transform .3s var(--ease), box-shadow .3s, border-color .22s;
+    cursor: none;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--sh-lg);
+        border-color: rgba(82, 183, 136, .4);
+
+        & ${Overlay} {
+            background: rgba(45, 106, 79, .08);
+        }
+
+        & ${Thumbnail} img {
+            transform: scale(1.05);
+            filter: saturate(1);
+        }
+
+        & ${ViewBtn} {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        & ${Name} {
+            color: var(--accent);
+        }
+    }
 `;
