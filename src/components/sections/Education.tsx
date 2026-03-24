@@ -14,7 +14,7 @@ export default function Education() {
         <C.SectionTitle>학력 &amp; <em>자격</em></C.SectionTitle>
         <S.GridBox ref={ref}>
           {EDUCATIONS.map((edu, idx) => (
-            <S.EduCard key={edu.name} className='js-reveal' style={{ transitionDelay: `${idx * 80}ms` }} data-hover="">
+            <S.EduCard key={edu.name} className='js-reveal' style={{ transitionDelay: `${idx * 80}ms` }}>
               <S.Category>{edu.category}</S.Category>
               <S.Name>{edu.name}</S.Name>
               <S.SubInfo>{edu.subInfo}</S.SubInfo>

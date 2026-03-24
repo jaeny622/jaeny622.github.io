@@ -24,7 +24,7 @@ export default function Experience() {
               </S.CoCard>
               <S.Projects>
                 {exp.projects.map(proj => (
-                  <S.ProjectCard key={proj.name} data-hover="">
+                  <S.ProjectCard key={proj.name}>
                     <S.ProjName>{proj.name}</S.ProjName>
                     <S.ProjPeriod>{proj.period}</S.ProjPeriod>
                     <S.ProjDesc>{proj.desc}</S.ProjDesc>
