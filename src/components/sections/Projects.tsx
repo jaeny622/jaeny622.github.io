@@ -27,7 +27,6 @@ export default function Projects({ onOpen }: Props) {
                 className='js-reveal'
                 style={{ transitionDelay: `${idx * 60}ms` }}
                 onClick={() => onOpen(proj)}
-                data-hover=""
               >
                 <S.Thumbnail>
                   {thumb

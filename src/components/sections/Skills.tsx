@@ -15,7 +15,7 @@ export default function Skills() {
         <C.SectionTitle>기술 <em>스택</em></C.SectionTitle>
         <S.GridBox ref={ref}>
           {SKILLS.map(sk => (
-            <S.SkillCard key={sk.name} className='js-reveal' data-hover="">
+            <S.SkillCard key={sk.name} className='js-reveal'>
               <S.Icon>{sk.icon}</S.Icon>
               <S.Name>{sk.name}</S.Name>
               <S.SkillChipBox>
