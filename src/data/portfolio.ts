@@ -1,4 +1,4 @@
-import type { AboutCard, SkillCategory, Experience, Project, Education } from '@/types';
+import type { AboutCard, SkillCategory, Experience, Project, Education, StoryCard } from '@/types';
 
 export const MARQUEE_ITEMS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'AmCharts', 'Storybook', 'Vite', 'Webpack', 'Styled-components','REST API'];
 export const TECH_PILLS = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'React', 'TypeScript', 'MobX', 'Chart.js', 'D3.js', 'Billboard.js', 'Amcharts', 'Storybook', 'Vite', 'Styled-components'];
@@ -219,4 +219,37 @@ export const EDUCATIONS: Education[] = [
     subInfo: '한국산업인력공단',                         
     date: '2017.11 취득' 
   },
+];
+
+export const STORIES: StoryCard[] = [
+  { 
+    seq: '01',
+    title: '통합의 주역',
+    contents: '팀 간 프로젝트 이관 시 발생하는 컨벤션 부재 문제를 직접 팀장에게 발의하고 회의를 주도했습니다. 각 팀의 자율성을 지키면서도 공통 표준을 만들어 협업 효율을 크게 높였습니다.'
+  },
+  { 
+    seq: '02',
+    title: '신입의 반란',
+    contents: '입사 8개월 차, 신입으로 파트장을 맡았습니다. 공통 컴포넌트 먼저 구현하고 Storybook을 도입해 팀 효율을 높였으며, 매주 진행상황을 공유하며 기한 내 성공적으로 완성했습니다.'
+  },
+  { 
+    seq: '03',
+    title: '백엔드와의 화합', 
+    contents: '파일 뷰어 구현 난관에서 프론트엔드 한계를 인정하고 백엔드에 도움을 요청했습니다. Java · Python 테스트까지 직접 진행해 설득력 있는 제안으로 통합 뷰어를 완성했습니다.'
+  },
+  { 
+    seq: '04',
+    title: '기술적 창의성',
+    contents: '특정 OS에서 HTML Audio 볼륨 조절이 불가한 이슈를 체계적으로 분석하고, 음원 변질 없는 대안을 PL에 논리적으로 보고해 협력사·고객사의 동의까지 이끌어냈습니다.'
+  },
+  { 
+    seq: '05',
+    title: '구조 개선 및 유지보수 효율화',
+    contents: '9개 화면에 중복된 UI 코드를 공통 템플릿 구조로 통합 설계하여 코드 재사용성과 가독성을 높이고, 기능 확장 및 수정 시 발생할 수 있는 오류 가능성과 유지보수 비용을 크게 절감했습니다.'
+  },
+  { 
+    seq: '06',
+    title: '서비스 안정성 및 품질 확보',
+    contents: '고객사 요청 기능 및 자사 제품 개선 사항 적용 시 테스트 케이스를 직접 설계·수행하여 기능 검증 체계를 강화하고 서비스 품질 안정성을 확보했습니다.'
+  }
 ];
