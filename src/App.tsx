@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 
 import Cursor      from '@/components/layout/Cursor';
 import Navbar      from '@/components/layout/Navbar';
@@ -13,9 +13,10 @@ import Projects from '@/components/sections/Projects';
 import Education from '@/components/sections/Education';
 import Story from '@/components/sections/Story';
 
-import Modal from '@/components/ui/Modal';
+const Modal = lazy(() => import('@/components/ui/Modal'));
 
 import { Project } from '@/types';
+import LazySection from '@/components/ui/LazySection';
 
 export default function App() {
   const [active, setActive] = useState<Project | null>(null);
@@ -29,13 +30,28 @@ export default function App() {
         <Marquee />
         <About />
         <Skills />
-        <Experience />
-        <Projects onOpen={setActive}/>
-        <Education />
-        <Story />
+        <LazySection>
+          <Experience />
+        </LazySection>
+        <LazySection>
+          <Projects onOpen={setActive} />
+        </LazySection>
+        <LazySection>
+          <Education />
+        </LazySection>
+        <LazySection>
+          <Story />
+        </LazySection>
       </main>
       <Footer />
-      <Modal project={active} onClose={() => setActive(null)} />
+      <Suspense fallback={null}>
+      {active && (
+        <Modal
+          project={active}
+          onClose={() => setActive(null)}
+        />
+      )}
+    </Suspense>
     </>
   );
 }
