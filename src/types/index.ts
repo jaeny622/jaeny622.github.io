@@ -34,3 +34,9 @@ export interface Project {
   points: string[];
   stack: string[];
 }
+export interface Education {
+  category: string;
+  name: string;
+  subInfo: string;
+  date: string;
+}
