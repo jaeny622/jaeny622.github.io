@@ -114,19 +114,6 @@ export const DefaultBtn = styled.a`
   }
 `;
 
-export const BtnPrimary = styled(DefaultBtn)`
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.3);
-  
-  transition: background 0.22s, transform 0.2s, box-shadow 0.22s;
-
-  &:hover {
-    background: var(--accent-l);
-    box-shadow: 0 8px 28px rgba(45, 106, 79, 0.35);
-  }
-`;
-
 export const BtnSecondary = styled(DefaultBtn)`
   background: var(--glass);
   color: var(--mid);

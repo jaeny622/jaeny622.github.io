@@ -22,7 +22,6 @@ export default function Intro() {
           사용자 중심으로 생각하는 프론트엔드 개발자입니다.
         </S.Description>
         <S.CTA>
-          <S.BtnPrimary href="#contact">연락하기 →</S.BtnPrimary>
           <S.BtnSecondary href="#experience">경력 보기</S.BtnSecondary>
         </S.CTA>
       </S.Leftbox>

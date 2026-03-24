@@ -9,8 +9,7 @@ const LINKS = [
   {href: '#experience', label: 'Experience'},
   {href: '#projects', label: 'Projects'},
   {href: '#education', label: 'Education'},
-  {href: '#story', label: 'Story'},
-  {href: '#contact', label: 'Contact'},
+  {href: '#story', label: 'Story'}
 ]
 
 export default function Navbar() {
