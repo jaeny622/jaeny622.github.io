@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Cursor      from '@/components/layout/Cursor';
 import Navbar      from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 import Intro       from '@/components/sections/Intro';
 import Marquee     from '@/components/sections/Marquee';
@@ -33,6 +34,7 @@ export default function App() {
         <Education />
         <Story />
       </main>
+      <Footer />
       <Modal project={active} onClose={() => setActive(null)} />
     </>
   );
