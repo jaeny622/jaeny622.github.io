@@ -45,8 +45,6 @@ export const Badge = styled.div`
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   color: var(--accent);
-
-  animation: heroFadeIn 0.7s 0.15s ease both;
 `;
 
 export const Dot = styled.div`
@@ -55,8 +53,6 @@ export const Dot = styled.div`
 
   border-radius: 50%;
   background: var(--accent);
-
-  animation: pulseGreen 2.5s ease infinite;
 `;
 
 export const Name = styled.h1`
@@ -69,8 +65,6 @@ export const Name = styled.h1`
   color: var(--ink);
 
   margin-bottom: 1.8rem;
-
-  animation: heroFadeUp 0.9s 0.3s var(--smooth) both;
 
   & em {
     font-style: normal;
@@ -85,17 +79,12 @@ export const Description = styled.p`
 
   max-width: 460px;
   margin-bottom: 2.5rem;
-
-  animation: heroFadeUp 0.8s 0.5s var(--smooth) both;
 `;
 
-// 필요할지 모르겟음
 export const CTA = styled.div`
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
-
-  animation: heroFadeUp 0.8s 0.65s var(--smooth) both;
 `;
 
 export const DefaultBtn = styled.a`
@@ -130,7 +119,7 @@ export const BtnSecondary = styled(DefaultBtn)`
 `;
 
 export const Panel = styled.div`
-  animation: heroSlideLeft 0.9s 0.45s var(--smooth) both;
+  animation: slideLeft 0.9s 0.45s var(--smooth) both;
 `;
 
 export const Card = styled.div`

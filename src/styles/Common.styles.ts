@@ -7,6 +7,10 @@ export const SectionWrap = styled.div`
 
     position: relative; 
     z-index: 1;
+
+    @media(max-width: 900px) {
+        padding: 5rem 1.5rem; 
+    }
 `;
 
 export const SectionAlt = styled.section`
