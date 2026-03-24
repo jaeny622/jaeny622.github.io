@@ -1,20 +1,25 @@
 import * as S from '@/components/sections/Intro.styles';
 
-import { TECH_PILLS } from '@/data/portfolio'; 
+import { TECH_PILLS, EXPERIENCES } from '@/data/portfolio'; 
 
-const STATS = [
-  { num: '5', sup: '+', label: 'Years Exp' },
-  { num: '10', sup: '+', label: 'Projects' },
-  { num: '2',  sup: '',  label: 'Companies' },
-]
 
 export default function Intro() {
+  const today = new Date();
+
+  const careerYears = today.getFullYear() - 2021 + 1;
+
+  const STATS = [
+    { num: careerYears, sup: '+', label: 'Years Exp' },
+    { num: `${EXPERIENCES.reduce((sum, cur) => sum + cur.projects.length, 0)}`, sup: '+', label: 'Projects' },
+    { num: `${EXPERIENCES.length}`,  sup: '',  label: 'Companies' },
+  ];
+
   return (
     <S.IntroSection id="intro">
       <S.Leftbox>
         <S.Badge>
           <S.Dot />
-          Frontend Developer · 5년차
+          Frontend Developer · {careerYears}년차
         </S.Badge>
         <S.Name>오<em>지수</em><br />포트폴리오</S.Name>
         <S.Description>
@@ -30,7 +35,7 @@ export default function Intro() {
         <S.Card>
           <S.CardLabel>Career Overview</S.CardLabel>
           <S.Stats>
-            {STATS.map(stat=>(
+            {STATS.map(stat => (
               <div key={stat.label}>
                 <S.StatNum>{stat.num}{stat.sup && <sup>{stat.sup}</sup>}</S.StatNum>
                 <S.StatLabel>{stat.label}</S.StatLabel>
