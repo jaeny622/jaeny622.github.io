@@ -47,31 +47,31 @@ export const EXPERIENCES: Experience[] = [
         name: '미래엔 디지털 교과서 지원', 
         period: '2024.05 — 2024.10',
         desc: '공통 컴포넌트 유지보수 및 크로스브라우징 이슈 해결. 특정 OS 오디오 볼륨 이슈 분석·대안 제안으로 고객사 동의 획득',
-        tags: ['React', 'TypeScript', 'Storybook'] 
+        tags: ['React', 'TypeScript', 'Storybook', 'Styled-components']
       },
       { 
         name: '미래엔 AI Class 사업',
         period: '2023.09 — 2024.04',
         desc: '팀 내 최다 페이지 담당. 사용자 페이지(AI 학습지, 퀴즈온, 리포트) 및 관리자 페이지 구현. 통합 뷰어 기술 리서치 및 백엔드 소통 주도',
-        tags: ['React',' TypeScript', 'MobX', 'Vite', 'Chart.js', 'D3.js']
+        tags: ['React', 'Mobx', 'TypeScript', 'Vite', 'Chart.js', 'D3.js', 'Styled-components', 'html2canvas', 'jspdf', 'react-datepicker']
       },
       { 
         name: '자사 LMS 데모 페이지 구현',
         period: '2022.12 — 2023.09',
         desc: '에듀테크 박람회 출품용 데모 페이지. 파트장 역할 수행. 공통 컴포넌트 설계·구현, Storybook 도입, 컨벤션 정립',
-        tags: ['React', 'TypeScript', 'MobX', 'Storybook', 'Billboard.js', 'Chart.js', 'D3.js']
+        tags: ['React', 'Mobx', 'TypeScript', 'Vite', 'Webpack', 'Chart.js', 'D3.js', 'Billobard.js', 'Storybook', 'Styled-components']
       },
       { 
         name: '연구본부 프론트엔드 컨벤션 통합',
         period: '2023.01',
         desc: '팀 간 이관 시 발생하는 문제 해결을 위해 컨벤션 통합 의견 발의 및 회의 주도. 빌드도구·Lint·폴더구조·Node 버전 표준화',
-        tags: ['Vite', 'ESLint', 'Prettier', 'tsconfig']
+        tags: ['Vite', 'ESLint', 'Prettier', 'tsconfig', '프로젝트 폴더 구조', '파일/폴더 네이밍', '기본 라이브러리 목록', 'node version']
       },
       { 
         name: 'Talendar 구현 / KDB Editor 유지보수',
         period: '2022.04 — 2022.12',
-        desc: '연구본부 일정관리 페이지 풀스택 구현 (로그인·마이프로필). KDB Editor 이관 받아 코드 분석 및 이슈 문서화',
-        tags: ['React', 'MobX', 'MUI', 'JAVA', 'Spring']
+        desc: '연구본부 일정관리 페이지 풀스택 구현 (로그인 · 마이프로필). KDB Editor 이관 받아 코드 분석 및 이슈 문서화',
+        tags: ['JAVA', 'Spring Framework', 'React', 'MUI', 'Mobx', 'Webpack', 'TypeScript', 'react-calendar']
       },
     ],
   },
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
       '통합 뷰어(hwp, docx, xlsx, PPT, PDF) 기술 리서치 및 백엔드 소통 주도하여 완성',
       'Chart.js, D3.js 활용 차트 커스터마이징 및 크로스브라우징 이슈 해결'
     ],
-    stack: ['React', 'TypeScript', 'MobX', 'Vite', 'Chart.js', 'D3.js', 'Storybook', 'Styled-components', 'html2canvas', 'jspdf']
+    stack: ['React', 'Mobx', 'Typescript', 'Vite', 'Chart.js', 'D3.js', 'Styled-components', 'html2canvas', 'jspdf', 'react-datepicker']
   },
   {
     seq: '003', 
@@ -131,7 +131,7 @@ export const PROJECTS: Project[] = [
       'Chart.js, D3.js, Billboard.js 활용 디자인 가이드 기반 차트 커스터마이징',
       'Webpack → Vite 빌드 환경 전환으로 빌드 속도 대폭 개선'
     ],
-    stack: ['React', 'TypeScript', 'MobX', 'Vite', 'Webpack', 'Chart.js', 'D3.js', 'Billboard.js', 'Storybook', 'Styled-components']
+    stack: ['React', 'Mobx', 'Typescript', 'Vite', 'Webpack', 'Chart.js', 'D3.js', 'Billobard.js', 'Storybook', 'Styled-components']
   },
   {
     seq: '004', 
@@ -171,8 +171,8 @@ export const PROJECTS: Project[] = [
   {
     seq: '006', 
     fallback: 'Groupware', 
-    thumbKey: null, 
-    galleryKeys: [],
+    thumbKey: 'g_main', 
+    galleryKeys: ['g_functions', 'g_main', 'g_mypage', 'g_emp_info', 'g_notice', 'g_notice_register'],
     category: 'KOSTA 교육과정 · 우수상', 
     name: '그룹웨어 웹 구현',
     desc: '팀 협업 주도로 우수상 수상. 기업용 그룹웨어 풀스택 구현',
