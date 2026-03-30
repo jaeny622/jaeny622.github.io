@@ -19,7 +19,7 @@ export const Overlay = styled.div<{$open: boolean}>`
 export const Panel = styled.div`
   width: 100%;
   max-width: 900px;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
   
   background: rgba(255, 255, 255, .96);
